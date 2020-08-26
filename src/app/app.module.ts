@@ -9,6 +9,7 @@ import { EditComponent } from './Tareas/edit/edit.component';
 import {FormsModule} from '@angular/forms';
 import {TareaServiceService} from './Service/tarea-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { WelcomeComponent } from './Welcome/welcome/welcome.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     ListComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
