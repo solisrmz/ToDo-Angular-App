@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './Tareas/list/list.component';
 import { AddComponent } from './Tareas/add/add.component';
 import { EditComponent } from './Tareas/edit/edit.component';
+import {FormsModule} from '@angular/forms';
+import {TareaServiceService} from './Service/tarea-service.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +20,11 @@ import { EditComponent } from './Tareas/edit/edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TareaServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
