@@ -1,17 +1,53 @@
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark navColor">
+<header class="base">
+  <br/>
+  <div class="base" align="center">
+    <br/>
+    <img src="./assets/images/me.jpg" alt="yo" class="image" align="center">
+    <br/>
+    <br/>
+    <h2 class="h2Color">José Abraham Solís Ramírez</h2>
+    <p class="h2Color">Licenciado en Tecnologías Computacionales por la Universidad Veracruzana</p>
+    <hr/>
+    <div class="row justify-content-center">
+      <div class="col-md-1">
+        <a href="https://www.facebook.com/SolisRmz1/">
+          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/facebook-new.png"/>
+        </a>
+      </div>
+      <div class="col-md-1">
+        <a href="https://www.instagram.com/solisrmz">
+          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/instagram-new.png"/>
+        </a>
+      </div>
+      <div class="col-md-1">
+        <a href="https://twitter.com/RmzSo">
+          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/twitter--v1.png"/>
+        </a>
+      </div>
+      <div class="col-md-1">
+        <a href="https://www.linkedin.com/in/jos%C3%A9-abraham-sol%C3%ADs-ram%C3%ADrez-421aa11a1/">
+          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/>
+        </a>
+      </div>
+      <div class="col-md-1">
+        <a href="https://github.com/solisrmz">
+          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/github--v1.png"/>
+        </a>
+      </div>
+    </div>
+  </div>
+  <hr/>
+  <nav class="navbar navbar-expand-lg navbar-dark navColor bg-faded justify-content-center">
+    <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
     <a class="navbar-brand" href="#">
-      ToDo
+      Home
     </a>
     <button class="navbar-toggler" type="button" show>
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/add">Agregar tarea</a>
-        </li>
+    <div class="collapse navbar-collapse justify-content-center" >
+      <ul class="navbar-nav navbar-center">
         <li class="nav-item">
           <a class="nav-link" routerLink='/list'>Mis tareas</a>
         </li>
@@ -23,6 +59,7 @@
         </li>
       </ul>
     </div>
+  </div>
   </nav>
 </header>
 <router-outlet></router-outlet>

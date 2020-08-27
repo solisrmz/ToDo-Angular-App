@@ -4,3 +4,51 @@
     background:#5689A3;
 }
 
+@media (min-width: 500px) {
+    .navbar-brand.abs
+        {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+    }
+    
+
+.jumboColor{
+    background:#FFF4EA;
+}
+.h2Color{
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgb(222, 224, 226);
+}
+
+.textColor{
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgb(94, 97, 100);
+}
+
+.image{
+    width: 230px;
+    height: 230px;
+    border-radius: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(94, 97, 100);
+}
+
+.socialImage{
+    width: 25px;
+    height: 25px;
+}
+
+.base{
+    background-color:#5689A3;
+}
+
+.iframe{
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(94, 97, 100);
+}
