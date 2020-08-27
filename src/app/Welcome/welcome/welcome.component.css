@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+.jumboColor{
+    background:#FFF4EA;
+}
+.h2Color{
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgb(94, 97, 100);
+}
+
+.textColor{
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgb(94, 97, 100);
+}
+
+.image{
+    weight: 230px;
+    height: 230px;
+    border-radius: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(94, 97, 100);
+}
+
+.base{
+    background-color:#FFF4EA;
+}
+
+.iframe{
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(94, 97, 100);
+}
