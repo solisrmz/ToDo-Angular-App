@@ -6,14 +6,13 @@ import { Tarea } from '../Models/Tarea';
   providedIn: 'root'
 })
 export class TareaServiceService {
-
+  //Para guardar las tareas
   tarea:Tarea;
 
   constructor(private http:HttpClient ) { }
 
-  url = 'http://localhost:8090/api/v1.0/tareas/list';
-
+  //Obtengo todas las tareas haciendo la consulta a la API
   getTareas(){
-    return this.http.get<Tarea[]>("http://localhost:8090/api/v1.0/tareas/list");
+    return this.http.get<Tarea[]>("http://localhost:8080/todo/api/v1/todos");
   }
 }

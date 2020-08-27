@@ -1,3 +1,4 @@
+<br/>
 <div class="container">
     <div class="card">
         <div class="card-header" align="center"><h6>Mi lista de tareas</h6></div> 
@@ -12,8 +13,8 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let tareas of tareas">
-                        <td>{{tareas.nombre}}</td>
-                        <td>{{tareas.descripcion}}</td>
+                        <td>{{tareas.name}}</td>
+                        <td>{{tareas.description}}</td>
                         <td><button class="btn btn-warning btn-sm">Editar</button></td>
                         <td><button class="btn btn-danger btn-sm">Borrar</button></td>
                     </tr>
