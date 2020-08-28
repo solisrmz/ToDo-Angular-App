@@ -27,8 +27,6 @@ export class ListComponent implements OnInit {
 
   tareas:Tarea[];
   constructor(private service:TareaServiceService, private router:Router) { }
-
-  
   ngOnInit(): void {
     this.service.getTareas()
     .subscribe(data=>{
@@ -36,5 +34,28 @@ export class ListComponent implements OnInit {
         console.log(data);
       }
     )
+  }
+
+  Add(){
+    this.router.navigate(["create"]);
+  }
+
+  reloadData() {
+    this.service.getTareas()
+    .subscribe(data=>{
+        this.tareas=data;
+        console.log(data);
+      }
+    )
+  }
+
+  deleteTodo(id: number) {
+    this.service.delete(id)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.reloadData();
+        },
+        error => console.log(error));
   }
 }

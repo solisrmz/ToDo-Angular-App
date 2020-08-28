@@ -1,8 +1,10 @@
 <br/>
-<div class="container" @enterState>
+<div class="container mainContainer" @enterState>
     <div class="card">
         <div class="card-header" align="center"><h6>Mi lista de tareas</h6></div> 
-        <div class="card-body">  
+        <div class="card-body">
+            <button class="btn add btn-block" (click)="Add()">Agregar tarea</button>  
+            <br/>
             <div class="table-responsive">
             <table class="table table-bordered">
                 <thead class="thead-light">
@@ -16,7 +18,7 @@
                         <td>{{tareas.name}}</td>
                         <td>{{tareas.description}}</td>
                         <td><button class="btn btn-warning btn-sm">Editar</button></td>
-                        <td><button class="btn btn-danger btn-sm">Borrar</button></td>
+                        <td><button class="btn btn-danger btn-sm" (click)="deleteTodo(tareas.id)">Borrar</button></td>
                     </tr>
                 </tbody>
             </table>

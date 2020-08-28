@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+.add{
+    background: #5689A3;
+    color: aliceblue;    
+    font-family: 'Balsamiq Sans', cursive;
+}
+.add:hover{
+    background: #3f94be;
+}
+.mainContainer{
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgb(94, 97, 100);
+}
