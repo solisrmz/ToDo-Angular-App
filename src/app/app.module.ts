@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms';
 import {TareaServiceService} from './Service/tarea-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './Welcome/welcome/welcome.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { WelcomeComponent } from './Welcome/welcome/welcome.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
