@@ -17,8 +17,8 @@
                     <tr *ngFor="let tareas of tareas">
                         <td>{{tareas.name}}</td>
                         <td>{{tareas.description}}</td>
-                        <td><button class="btn btn-warning btn-sm">Editar</button></td>
-                        <td><button class="btn btn-danger btn-sm" (click)="deleteTodo(tareas.id)">Borrar</button></td>
+                        <td><button class="btn update btn-sm" (click)="edit(tareas.id)">Editar</button></td>
+                        <td><button class="btn delete btn-sm" (click)="deleteTodo(tareas.id)">Borrar</button></td>
                     </tr>
                 </tbody>
             </table>
