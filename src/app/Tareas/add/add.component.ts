@@ -29,6 +29,11 @@ export class AddComponent implements OnInit {
       this.gotoList();
     }, 
     error => console.log(error));
+    Swal.fire(
+      'Error',
+      'No fue prosible agregar la tarea',
+      'error'
+    )
   }
 
   onSubmit() {

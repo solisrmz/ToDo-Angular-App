@@ -25,7 +25,6 @@ import Swal from 'sweetalert2';
 ]
 })
 export class ListComponent implements OnInit {
-
   tareas:Tarea[];
   constructor(private service:TareaServiceService, private router:Router) { }
   ngOnInit(): void {
