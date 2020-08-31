@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tarea } from '../../Models/Tarea';
+import {TareaMotivo} from '../../Models/TareaMotivo'
+import {Motivo} from '../../Models/Motivo';
 import {TareaServiceService} from '../../Service/tarea-service.service';
 import { Router} from '@angular/router';
 import Swal from 'sweetalert2';
@@ -11,14 +13,25 @@ import Swal from 'sweetalert2';
 })
 export class AddComponent implements OnInit {
   tarea: Tarea = new Tarea();
+  motivos : Motivo[];
+  seleccionado : string = '';
+  verSeleccion: string = '';
   constructor(private tareaService:TareaServiceService, private router:Router) { }
 
   ngOnInit(){
+    this.tareaService.getMotivos()
+    .subscribe(data=>{
+        this.motivos=data;
+        console.log(data);
+      }
+    )
   }
 
   save() {
+    this.verSeleccion = this.seleccionado;
+    let tm: TareaMotivo = new TareaMotivo(this.tarea, this.verSeleccion)
     this.tareaService
-    .create(this.tarea).subscribe(data => {
+    .create(tm).subscribe(data => {
       console.log(data)
       this.tarea = new Tarea();
       Swal.fire(

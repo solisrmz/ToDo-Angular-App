@@ -6,11 +6,18 @@
             <form (ngSubmit)="onSubmit()">
                 <div class="form-group">
                   <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control texto" id="name" [(ngModel)]="tarea.name" name="name">
+                  <input type="text" class="form-control texto" id="name" required [(ngModel)]="tarea.name" name="name">
                 </div>
                 <div class="form-group">
                   <label for="descripcion">Descripción</label>
-                  <input type="text-area" class="form-control texto" id="description" [(ngModel)]="tarea.description" name="description">
+                  <input class="form-control texto" id="description" required [(ngModel)]="tarea.description" name="description">
+                </div>
+                <div class="form-group">  
+                <label for="id_motivo">Selecciona la importancia de la tarea</label>
+                <select class="form-control texto" name="id_motivo" id="id_motivo" required [(ngModel)]="seleccionado">
+                  <option class="texto" value="">Selecciona</option>    
+                  <option class="texto" *ngFor="let motivos of motivos">{{motivos.nombre}}</option>
+                </select>
                 </div>
                 <button type="submit" class="btn btn-block add">Agregar</button>
               </form>

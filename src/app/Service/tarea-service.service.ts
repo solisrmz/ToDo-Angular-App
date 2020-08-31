@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Tarea } from '../Models/Tarea';
+import {Motivo} from '../Models/Motivo';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -17,6 +18,10 @@ export class TareaServiceService {
   //Obtengo todas las tareas haciendo la consulta a la API
   getTareas(){
     return this.http.get<Tarea[]>(this.baseUrl + "/todos");
+  }
+
+  getMotivos(){
+    return this.http.get<Motivo[]>(this.baseUrl + "/motivos");
   }
 
   create(todo: Object): Observable<Object>{
