@@ -11,6 +11,7 @@ import {TareaServiceService} from './Service/tarea-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './Welcome/welcome/welcome.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MyProjectsComponent } from './Proyectos/my-projects/my-projects.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ListComponent,
     AddComponent,
     EditComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    MyProjectsComponent
   ],
   imports: [
     BrowserModule,
