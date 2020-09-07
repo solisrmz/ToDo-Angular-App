@@ -1,8 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 .pnce-image{
     width: 700px;
     height: 400px;
-    border-radius: 20px;
-    border-width: 3px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(94, 97, 100);
+}
+
+.texto{
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgb(94, 97, 100);
+}
+
+.lecto-image{
+    width: 500px;
+    height: 200px;
+    border-radius: 5px;
+    border-width: 2px;
     border-style: solid;
     border-color: rgb(94, 97, 100);
 }
