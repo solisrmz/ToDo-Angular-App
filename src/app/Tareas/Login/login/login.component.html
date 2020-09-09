@@ -1,8 +1,11 @@
 <br>
-<div class="container mainContainer">
-    <div class="card">
-        <div class="card-header">Iniciar sesión</div>
+<div class="container mainContainer" align="center">
+    <div class="card card-border shadow p-3 mb-5">
         <div class="card-body texto">
+            <h3 class="texto">Iniciar sesión</h3>
+            <hr/>
+            <img src="https://img.icons8.com/cotton/96/000000/gender-neutral-user--v1.png"/>
+            <hr/>
             <form (ngSubmit)="onSubmit()">
                 <div class="form-group">
                   <label for="nombre">Usuario</label>
@@ -12,6 +15,7 @@
                   <label for="descripcion">Contraseña</label>
                   <input type="password" class="form-control texto" id="pwd" required [(ngModel)]="user.password" name="description">
                 </div>
+                <hr/>
                 <button type="submit" class="btn btn-block add">Ingresar</button>
               </form>
         </div>
