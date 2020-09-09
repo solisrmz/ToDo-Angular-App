@@ -1,0 +1,19 @@
+<br>
+<div class="container mainContainer">
+    <div class="card">
+        <div class="card-header">Iniciar sesión</div>
+        <div class="card-body texto">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="nombre">Usuario</label>
+                  <input type="text" class="form-control texto" id="nombre" required [(ngModel)]="user.nombre">
+                </div>
+                <div class="form-group">
+                  <label for="descripcion">Contraseña</label>
+                  <input type="password" class="form-control texto" id="pwd" required [(ngModel)]="user.password" name="description">
+                </div>
+                <button type="submit" class="btn btn-block add">Ingresar</button>
+              </form>
+        </div>
+    </div>
+</div>

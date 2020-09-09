@@ -8,10 +8,14 @@ import { AddComponent } from './Tareas/add/add.component';
 import { EditComponent } from './Tareas/edit/edit.component';
 import {FormsModule} from '@angular/forms';
 import {TareaServiceService} from './Service/tarea-service.service';
-import { HttpClientModule } from '@angular/common/http';
+import {AuthInterceptorService} from './Service/auth-interceptor.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {UserGuardService} from './Guard/user-guard.service';
+import {LoginService} from './Service/login.service';
 import { WelcomeComponent } from './Welcome/welcome/welcome.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MyProjectsComponent } from './Proyectos/my-projects/my-projects.component';
+import { LoginComponent } from './Tareas/Login/login/login.component';
 
 
 @NgModule({
@@ -21,7 +25,8 @@ import { MyProjectsComponent } from './Proyectos/my-projects/my-projects.compone
     AddComponent,
     EditComponent,
     WelcomeComponent,
-    MyProjectsComponent
+    MyProjectsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,11 @@ import { MyProjectsComponent } from './Proyectos/my-projects/my-projects.compone
     FormsModule,
     HttpClientModule
   ],
-  providers: [TareaServiceService],
+  providers: [TareaServiceService, LoginService, UserGuardService, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

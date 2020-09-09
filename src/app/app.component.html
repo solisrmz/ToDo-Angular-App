@@ -47,13 +47,16 @@
           <a class="nav-link" routerLink=''>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink='/list'>Mis tareas</a>
+          <a class="nav-link" (click)="List()">Mis tareas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink='/projects'>Mis proyectos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link">Contáctame</a>
+        </li>
+        <li *ngIf="token !=null">
+          <a class="nav-link" (click)="logout()">Salir</a>
         </li>
       </ul>
     </div>
