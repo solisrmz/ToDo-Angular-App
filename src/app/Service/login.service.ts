@@ -13,6 +13,6 @@ export class LoginService {
   constructor(private http:HttpClient ) { }
 
   login(user: Object): Observable<any>{
-    return this.http.post("http://localhost:8080/todo/login",user);
+    return this.http.post("http://localhost:8080/todoapp/login",user);
   }
 }

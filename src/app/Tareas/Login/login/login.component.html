@@ -2,18 +2,31 @@
 <div class="container mainContainer" align="center">
     <div class="card card-border shadow p-3 mb-5">
         <div class="card-body texto">
-            <h3 class="texto">Iniciar sesión</h3>
+            <h3 class="mainContainer">Iniciar sesión</h3>
             <hr/>
             <img src="https://img.icons8.com/cotton/96/000000/gender-neutral-user--v1.png"/>
             <hr/>
+            <div [hidden]="!mostrar">
+              <mat-progress-bar mode='indeterminate'></mat-progress-bar>
+              Buscando ...
+            </div>
+            <div [hidden]= "!encontrado">
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                Usuario no encontrado
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </div>
+            <br/>
             <form (ngSubmit)="onSubmit()">
                 <div class="form-group">
                   <label for="nombre">Usuario</label>
-                  <input type="text" class="form-control texto" id="nombre" required [(ngModel)]="user.nombre">
+                  <input type="text" class="form-control texto" id="nombre" required [(ngModel)]="user.nombre" name="nombre">
                 </div>
                 <div class="form-group">
                   <label for="descripcion">Contraseña</label>
-                  <input type="password" class="form-control texto" id="pwd" required [(ngModel)]="user.password" name="description">
+                  <input type="password" class="form-control texto" id="pwd" required [(ngModel)]="user.password" name="password">
                 </div>
                 <hr/>
                 <button type="submit" class="btn btn-block add">Ingresar</button>

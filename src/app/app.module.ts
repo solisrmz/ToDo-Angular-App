@@ -16,7 +16,9 @@ import { WelcomeComponent } from './Welcome/welcome/welcome.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MyProjectsComponent } from './Proyectos/my-projects/my-projects.component';
 import { LoginComponent } from './Tareas/Login/login/login.component';
-
+import { NgxSpinnerModule } from "ngx-spinner";  
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,10 @@ import { LoginComponent } from './Tareas/Login/login/login.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    NgxSpinnerModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule
   ],
   providers: [TareaServiceService, LoginService, UserGuardService, {
       provide: HTTP_INTERCEPTORS,
