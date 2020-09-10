@@ -46,6 +46,12 @@
     background-color:#5689A3;
 }
 
+.foot{
+    background:#5689A3;
+    width: 100%;
+    height: 10%;
+}
+
 .iframe{
     border-radius: 20px;
     border-width: 3px;

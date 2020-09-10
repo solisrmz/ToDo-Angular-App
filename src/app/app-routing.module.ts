@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'list', component:ListComponent, canActivate: [UserGuardService]},
   {path:'create', component:AddComponent, canActivate: [UserGuardService]},
-  {path: 'projects', component:MyProjectsComponent, canActivate: [UserGuardService]},
+  {path: 'projects', component:MyProjectsComponent},
   {path: 'tarea/:id', component:EditComponent, canActivate: [UserGuardService]}
 ];
 
