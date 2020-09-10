@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  backEndURL: 'http://localhost:8080/todoapp/api/v1',
 };
 
 /*

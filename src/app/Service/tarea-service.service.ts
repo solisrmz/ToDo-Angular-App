@@ -11,9 +11,9 @@ import { environment } from 'src/environments/environment';
 export class TareaServiceService {
   //Para guardar las tareas
   tarea:Tarea;
-  baseUrl: string;
+  baseUrl: 'http://localhost:8080/todoapp/api/v1';
 
-  constructor(private http:HttpClient ) {this.baseUrl = environment.backEndURL }
+  constructor(private http:HttpClient ) { }
 
   //Obtengo todas las tareas haciendo la consulta a la API
   getTareas(){

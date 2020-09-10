@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger, style, animate, transition, state} from '@angular/animations';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-welcome',
@@ -25,6 +26,7 @@ export class WelcomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }
