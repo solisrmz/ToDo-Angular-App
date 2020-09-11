@@ -1,7 +1,15 @@
 <br/>
+<!--Div con un enterState con el cual se muestra la animación-->
 <div class="container mainContainer" @enterState>
-    <div class="card">
-        <div class="card-header" align="center"><h2 class="mainContainer">Mi lista de tareas</h2></div> 
+    <!--Si hay un token entonces se muestra el botón de logout-->
+    <div *ngIf="token !=null" class="row logout" align="right">
+        <a class="textColor" (click)="logout()">Salir <img src="https://img.icons8.com/cotton/32/000000/logout-rounded.png"/></a>
+    </div>
+    <br/>
+    <hr/>
+    <!--Card en donde se muestra una tabla con los datos-->
+    <div class="card card-border shadow-sm">
+        <div class="card-header" align="center"><h2 class="mainContainer">¡Hola {{username}}! Estas son tus tareas</h2></div> 
         <div class="card-body">
             <button class="btn add btn-block" (click)="Add()">Agregar tarea</button>  
             <br/>
@@ -16,9 +24,10 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let tareas of tareas">
-                        <td>{{tareas.name}}</td>
-                        <td>{{tareas.description}}</td>
-                        <td *ngIf = "tareas.id_motivo.nombre == 'Urgente'; else elseBlock"><div class="btn btn-danger"></div> Urgente</td>
+                        <td class="textColor">{{tareas.name}}</td>
+                        <td class="textColor">{{tareas.description}}</td>
+                        <!--Bloque que muestra la urgencia de la tarea creada-->
+                        <td class="textColor" *ngIf = "tareas.id_motivo.nombre == 'Urgente'; else elseBlock"><div class="btn btn-danger"></div> Urgente</td>
                         <ng-template #elseBlock><td><div class="btn btn-warning btn-circle"></div> Importante</ng-template>
                         <td><button class="btn update btn-sm" (click)="edit(tareas.id)">Editar</button></td>
                         <td><button class="btn delete btn-sm" (click)="deleteTodo(tareas.id)">Borrar</button></td>

@@ -48,7 +48,9 @@ export class LoginComponent implements OnInit {
           //Si el usuario está registrado  
           }else{
             //Se guarda el token de auntenticación y se redirige
+            console.log(result);
             localStorage.setItem('token', result.token);
+            localStorage.setItem('username', result.username);
             this.router.navigate(["list"]);
           }
       },error => console.log(error));

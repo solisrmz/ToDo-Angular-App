@@ -24,7 +24,6 @@ import {trigger, style, animate, transition, state} from '@angular/animations';
 })
 export class AppComponent {
   title = 'Tareas';
-  token = localStorage.getItem("token");
   constructor (private router:Router){}
 
   List(){
@@ -38,10 +37,5 @@ export class AppComponent {
   }
   Add(){
     this.router.navigate(["create"]);
-  }
-
-  logout(){
-    localStorage.removeItem("token");
-    this.router.navigate([""]);
   }
 }

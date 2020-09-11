@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
+  //Para crear la animación de entrada
   animations:[
     trigger('enterState', [
       state('void', style({
@@ -24,26 +25,32 @@ import Swal from 'sweetalert2';
     ])
 ]
 })
+
 export class ListComponent implements OnInit {
+  //Arreglo en donde se van a almacenar todas las tareas
   tareas:Tarea[];
-  constructor(private service:TareaServiceService, private router:Router) { }
+  //Se recupera el token y el username guardados cuando se hizo el login
+  token = localStorage.getItem("token");
+  username = localStorage.getItem("username");
+  user: string;
+  constructor(private service:TareaServiceService, private router:Router) { 
+  }
   ngOnInit(): void {
-    this.service.getTareas()
-    .subscribe(data=>{
-        this.tareas=data;
-        console.log(data);
-      }
-    )
+    //Se obtienen todas las tareas
+    this.reloadData();
   }
 
+  //Ruta para agregar una nueva tarea, redirege al componente
   Add(){
     this.router.navigate(["create"]);
   }
 
+  //Redirige al componente en donde se edita una tarea
   edit(id: number){
     this.router.navigate(["tarea", id]);
   }
 
+  //Se recargan los datos en la tabla
   reloadData() {
     this.service.getTareas()
     .subscribe(data=>{
@@ -53,7 +60,9 @@ export class ListComponent implements OnInit {
     )
   }
 
+  //Se borra un elemento, la funcion recibe el id del elemento seleccionado
   deleteTodo(id: number) {
+    //Se usa Swal para preguntar si se quiere borrar el elemento
     Swal.fire({
       title: '¿Deseas borrar esta tarea?',
       text: "Será borrada definitivamente",
@@ -63,6 +72,7 @@ export class ListComponent implements OnInit {
       cancelButtonColor: '#8F2B45',
       confirmButtonText: 'Sí'
       }).then((result) => {
+      //Si da click en aceptar entonces llama al service en donde se borra  
       if (result.value) {
         this.service.delete(id)
         .subscribe(
@@ -71,12 +81,19 @@ export class ListComponent implements OnInit {
             this.reloadData();
           },
           error => console.log(error));
-        Swal.fire(
+          //Si se borra, entonce muestra un alert de confirmación
+          Swal.fire(
           'Borrado',
           'La tarea ha sido eliminada',
           'success'
         )
       }
     })
+  }
+
+  //Función para salir de la sesión
+  logout(){
+    localStorage.removeItem("token");
+    this.router.navigate([""]);
   }
 }

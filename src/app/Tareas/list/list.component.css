@@ -29,3 +29,20 @@
 .update:hover{
     background: #365b7a;
 }
+
+.textColor{
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgb(94, 97, 100);
+}
+
+.card-border{
+    width: 100%;
+    height: 30%;
+    border-radius: 0px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.logout{
+    float: right;
+}
