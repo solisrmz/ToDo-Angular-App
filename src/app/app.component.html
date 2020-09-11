@@ -9,40 +9,42 @@
     <p class="h2Color">Licenciado en Tecnologías Computacionales por la Universidad Veracruzana</p>
     <p class="h2Color">Xalapa, Veracruz. México</p>
     <hr/>
-    <div class="row justify-content-center" @enterState>
-      <div class="col-md-1">
-        <a href="https://www.facebook.com/SolisRmz1/">
-          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/facebook-new.png"/>
-        </a>
-      </div>
-      <div class="col-md-1">
-        <a href="https://www.instagram.com/solisrmz">
-          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/instagram-new.png"/>
-        </a>
-      </div>
-      <div class="col-md-1">
-        <a href="https://twitter.com/RmzSo">
-          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/twitter--v1.png"/>
-        </a>
-      </div>
-      <div class="col-md-1">
-        <a href="https://www.linkedin.com/in/jos%C3%A9-abraham-sol%C3%ADs-ram%C3%ADrez-421aa11a1/">
-          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/>
-        </a>
-      </div>
-      <div class="col-md-1">
-        <a href="https://github.com/solisrmz">
-          <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/github--v1.png"/>
-        </a>
-      </div>
+    <div class="justify-content-center navbar-nav-scroll" @enterState>
+      <ul class="navbar-nav bd-navbar-nav flex-row justify-content-center">
+        <li class="nav-item">
+          <a href="https://www.facebook.com/SolisRmz1/">
+            <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/facebook-new.png"/>
+          </a>
+        </li>
+        <li class="navbar-nav bd-navbar-nav flex-row">
+          <a href="https://www.instagram.com/solisrmz">
+            <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/instagram-new.png"/>
+          </a>
+        </li>
+        <li class="navbar-nav bd-navbar-nav flex-row">
+          <a href="https://twitter.com/RmzSo">
+            <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/twitter--v1.png"/>
+          </a>
+        </li>
+        <li class="navbar-nav bd-navbar-nav flex-row">
+          <a href="https://www.linkedin.com/in/jos%C3%A9-abraham-sol%C3%ADs-ram%C3%ADrez-421aa11a1/">
+            <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/>
+          </a>
+        </li>
+        <li class="navbar-nav bd-navbar-nav flex-row">
+          <a href="https://github.com/solisrmz">
+            <img class="socialImage" src="https://img.icons8.com/doodle/48/000000/github--v1.png"/>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <hr/>
 
-  <nav class="navbar navbar-expand-lg navbar-dark navColor bg-faded justify-content-center" @enterState>
+  <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar navColor" @enterState>
     <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
     <div class="justify-content-center" >
-      <ul class="navbar-nav navbar-center">
+      <ul class="navbar-nav navbar-center bd-navbar-nav flex-row">
         <li class="nav-item">
           <a class="nav-link" routerLink=''>Home</a>
         </li>

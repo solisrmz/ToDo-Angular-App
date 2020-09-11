@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {ListComponent} from './Tareas/list/list.component';
 import {AddComponent} from './Tareas/add/add.component';
 import {EditComponent} from './Tareas/edit/edit.component';
-import {WelcomeComponent} from './Welcome/welcome/welcome.component';
+import {WelcomeComponent} from '././Welcome/welcome/welcome.component';
 import {LoginComponent} from './Tareas/Login/login/login.component';
 import {MyProjectsComponent} from './Proyectos/my-projects/my-projects.component';
 import {UserGuardService} from './Guard/user-guard.service';

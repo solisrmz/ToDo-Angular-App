@@ -11,13 +11,13 @@ export class UserGuardService implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const token = localStorage.getItem('token');
     if (token == null) {
-      this.router.navigate(['401']);
+      this.router.navigate(['']);
       return false;
     } else {
       if (token !=null) {
         return true;
       } else {
-        this.router.navigate(['401']);
+        this.router.navigate(['']);
         return false;
       }
     }

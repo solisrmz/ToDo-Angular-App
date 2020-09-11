@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jose-solis": {
+      "hosting": {
+        "todo-app": [
+          "jose-solis"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jose-solis"
+  }
+}
