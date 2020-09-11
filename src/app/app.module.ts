@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './Tareas/list/list.component';
 import { AddComponent } from './Tareas/add/add.component';
 import { EditComponent } from './Tareas/edit/edit.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TareaServiceService} from './Service/tarea-service.service';
 import {AuthInterceptorService} from './Service/auth-interceptor.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -19,6 +19,7 @@ import { LoginComponent } from './Tareas/Login/login/login.component';
 import { NgxSpinnerModule } from "ngx-spinner";  
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     NgxSpinnerModule,
     HttpClientModule,
     MatProgressSpinnerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    ReactiveFormsModule
   ],
   providers: [TareaServiceService, LoginService, UserGuardService, {
       provide: HTTP_INTERCEPTORS,

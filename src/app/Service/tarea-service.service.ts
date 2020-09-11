@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Tarea } from '../Models/Tarea';
 import {Motivo} from '../Models/Motivo';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +10,15 @@ import { environment } from 'src/environments/environment';
 export class TareaServiceService {
   //Para guardar las tareas
   tarea:Tarea;
-  baseUrl: 'http://localhost:8080/todoapp/api/v1';
+  baseUrl: string;
 
-  constructor(private http:HttpClient ) { }
+  constructor(private http:HttpClient ) { 
+    this.baseUrl = 'http://localhost:8080/todoapp/api/v1';
+  }
 
   //Obtengo todas las tareas haciendo la consulta a la API
   getTareas(){
-    return this.http.get<Tarea[]>(this.baseUrl + "/todos");
+    return this.http.get<Tarea[]>(this.baseUrl + '/todos');
   }
 
   getMotivos(){
