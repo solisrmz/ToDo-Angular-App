@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Tarea } from '../../Models/Tarea';
-import {TareaMotivo} from '../../Models/TareaMotivo'
-import {Motivo} from '../../Models/Motivo';
-import {TareaServiceService} from '../../Service/tarea-service.service';
+import { Tarea } from '../../../Models/Tarea';
+import {TareaMotivo} from '../../../Models/TareaMotivo'
+import {Motivo} from '../../../Models/Motivo';
+import {TareaServiceService} from '../../../Service/tarea-service.service';
 import { Router} from '@angular/router';
 import Swal from 'sweetalert2';
 

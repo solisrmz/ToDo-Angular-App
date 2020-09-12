@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/Models/User';
 import { Router} from '@angular/router';
-import {LoginService} from '../../../Service/login.service';
+import {LoginService} from '../../../../Service/login.service';
 import { NgxSpinnerService } from "ngx-spinner";
 import {FormControl, Validators} from '@angular/forms';
 

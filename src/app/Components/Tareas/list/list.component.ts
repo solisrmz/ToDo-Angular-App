@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {TareaServiceService} from '../../Service/tarea-service.service';
+import {TareaServiceService} from '../../../Service/tarea-service.service';
 import { Router} from '@angular/router';
-import {Tarea} from '../../Models/Tarea';
+import {Tarea} from '../../../Models/Tarea';
 import {trigger, style, animate, transition, state} from '@angular/animations';
 import Swal from 'sweetalert2';
 
